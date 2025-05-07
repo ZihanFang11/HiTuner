@@ -1,0 +1,3 @@
+dataset: pubmed
+lamb: 0.7
+layer_num: 2
