@@ -2,16 +2,35 @@
 
 This repository is an implementation of HiTuner in IJCAI 2025.
 
+## Configure the Setup:
+
+The configuration parameters are stored in the `config.py` file. You can customize them as needed for your specific setup.
+
+    ```
+    # Setup configuration
+    cfg.dataset = 'cora'
+    cfg.llm.name = "llama"
+    cfg.lm.name = 'bert-base-uncased'
+    cfg.gnn.model.name = 'SAGE'
+
+    ```
+   
+
+## Datasets:
+
+The datasets used can be downloaded from [here](https://drive.google.com/drive/folders/1MUx97je9je2MMDJGWxtc1S4Pl8DEdqS0), 
+please download them and put them in datasets to `cfg.data_path`.
+
+
+
 
 ## Runing Commands
-
-The datasets used can be downloaded from [here](https://drive.google.com/drive/folders/1MUx97je9je2MMDJGWxtc1S4Pl8DEdqS0), please download them and put them in datasets to cfg.data_path.
 
 ### Step 1. 
 ```
 python3 LLM_infer.py 
 ```
-The cache.py will load the textual data of TAG, and next transform them to token embedding by LLM, which will be saved into cfg.llm.cache_path. 
+The cache.py will load the textual data of TAG, and next transform them to token embedding by LLM, which will be saved into `cfg.llm.cache_path`. 
 
 
 ### Step 2. 
@@ -19,7 +38,7 @@ The cache.py will load the textual data of TAG, and next transform them to token
 python3 LM_train.py 
 ```
 LM_train.py  will divide the dataset into nodes according to the training rate and save the divided nodes. 
-Then it will be updated through small-scale pre-trained model training and saved in output_trainratio{cfg.train_ratio}.
+Then it will be updated through small-scale pre-trained model training and saved in output_trainratio{`cfg.train_ratio`}.
 The saved embeddings will used in the training of HiTuner.
 
 
