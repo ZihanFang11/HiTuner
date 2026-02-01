@@ -1,6 +1,24 @@
-#  HiTuner: Hierarchical Semantic Fusion Model Fine-Tuning on Text-Attributed Graphs
 
-This repository is an implementation of HiTuner in IJCAI 2025.
+
+<h2 align="center"> <a href="https://www.ijcai.org/proceedings/2025/569">HiTuner: Hierarchical Semantic Fusion Model Fine-Tuning on Text-Attributed Graphs
+</a></h2>
+
+<div align="center">
+
+**Zihan Fang<sup>1,2</sup>, Zhiling Cai <sup>3</sup>, Yuxuan Zheng<sup>1,2</sup>, Shide Du<sup>1,2</sup>, Yanchao Tan<sup>1,2</sup>, Shiping Wang<sup>1,2</sup>**
+
+<sup>1</sup>College of Computer and Data Science, Fuzhou University, Fuzhou 350108, China<br>
+<sup>2</sup>Key Laboratory of Intelligent Metro, Fujian Province University, Fuzhou 350108, China<br>
+<sup>3</sup>College of Computer and Information Science, Fujian Agriculture and Forestry University, Fuzhou 350002, China<br>
+</div>
+
+## Abstract
+Text-Attributed Graphs (TAGs) are vital for modeling entity relationships across various domains. Graph Neural Networks have become cornerstone for processing graph structures, while the integration of text attributes remains a prominent research. The development of Large Language Models (LLMs) provides new opportunities for advancing textual encoding in TAGs. However, LLMs face challenges in specialized domains due to their limited task-specific knowledge, and fine-tuning them for specific tasks demands significant resources. To cope with the above challenges, we propose HiTuner, a novel framework that leverages fine-tuned Pre-trained Language Models (PLMs) with domain expertise as tuner to enhance the hierarchical LLM contextualized representations for modeling TAGs. Specifically, we first strategically select hierarchical hidden states of LLM to form a set of diverse and complementary descriptions as input for the sparse projection operator. Concurrently, a hybrid representation learning is developed to amalgamate the broad linguistic comprehension of LLMs with task-specific insights of the fine-tuned PLMs. Finally, HiTuner employs a confidence network to adaptively fuse the semantically-augmented representations. Empirical results across benchmark datasets spanning various domains validate the effectiveness of the proposed framework.
+
+## Model Architecture
+<div align="center">
+  <img src="framework.png" />
+</div>
 
 ## Configure the Setup:
 
@@ -59,13 +77,17 @@ After preprocessing the dataset, we run HiTuner for downstream tasks.
 
 
 
-## Citation
-If you find our work or dataset useful, please consider citing our work:
+
+## Reference
+
+If you find our work useful in your research, please consider citing:
+
 ```
 @inproceedings{hituner,
   title={HiTuner: Hierarchical Semantic Fusion Model Fine-Tuning on Text-Attributed Graphs},
   author={Zihan Fang and Zhiling Cai and Yuxuan Zheng and Shide Du and Yanchao Tan and Shiping Wang},
   booktitle={Proceedings of the Thirty-Fourth International Joint Conference on Artificial Intelligence},
-  year={2025}
+    pages     = {5110--5117},
+  year      = {2025}
 }
 ```
