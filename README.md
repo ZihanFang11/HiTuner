@@ -21,6 +21,14 @@ The configuration parameters are stored in the `config.py` file. You can customi
 The datasets used can be downloaded from [here](https://drive.google.com/drive/folders/1MUx97je9je2MMDJGWxtc1S4Pl8DEdqS0), 
 please download them and put them in datasets to `cfg.data_path`.
 
+| Dataset    | # Nodes | # Edges | # Clusters | Domain        |
+|------------|---------|---------|------------|---------------|
+| CiteSeer   | 3,186   | 4,277   | 6          | Academic      |
+| Cora       | 2,708   | 5,429   | 7          | Academic      |
+| Instagram  | 11,339  | 144,010 | 2          | Social        |
+| Photo      | 48,362  | 500,928 | 12         | E-commerce    |
+| PubMed    | 19,717  | 44,338  | 3          | Academic      |
+| WikiCS    | 11,701  | 216,123 | 10         | Wikipedia     |
 
 
 
